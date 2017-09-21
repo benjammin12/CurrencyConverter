@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string-array name="countries">
+        <item>JPY</item>
+        <item>CNY</item>
+        <item>RON</item>
+        <item>MXN</item>
+        <item>CAD</item>
+        <item>ZAR</item>
+        <item>AUD</item>
+        <item>NOK</item>
+        <item>ILS</item>
+        <item>THB</item>
+        <item>IDR</item>
+        <item>HRK</item>
+        <item>DKK</item>
+        <item>MYR</item>
+        <item>SEK</item>
+        <item>RSD</item>
+        <item>BGN</item>
+        <item>KRW</item>
+        <item>CZK</item>
+        <item>VND</item>
+        <item>NZD</item>
+        <item>GBP</item>
+        <item>CHF</item>
+        <item>RUB</item>
+        <item>INR</item>
+        <item>TRY</item>
+        <item>SGD</item>
+        <item>HKD</item>
+        <item>BRL</item>
+        <item>EUR</item>
+        <item>HUF</item>
+        <item>PHP</item>
+        <item>PLN</item>
+        <item>USD</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.benjaminxerri.currencyconverter.MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="15dp"
+        android:text="Select currency!"
+        style="@style/Basic_Type" />
+
+
+
+    <Spinner
+
+        android:id="@+id/base_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/header"
+        android:layout_toLeftOf="@+id/editText" />
+    <!--
+    <TextView
+        android:id="@+id/input_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/header"
+        android:layout_toLeftOf="@+id/editText"
+        />
+        -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount here"
+        android:id="@+id/editText"
+        android:paddingLeft="20dp"
+        android:inputType="numberDecimal"
+        android:textSize="14dp"
+        android:layout_alignBottom="@+id/base_currency"
+        android:layout_alignRight="@+id/header"
+        />
+
+    <TextView
+        android:id="@+id/spinner_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/header"
+        android:text="Convert to:"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/base_currency"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/header"
+        />
+
+    <Spinner
+
+        android:id="@+id/convert_currency_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/base_currency"
+        android:layout_toRightOf="@+id/spinner_label" />
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convert_currency_to"
+        android:text="Convert"
+        android:layout_toRightOf="@id/header"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convert_currency_to"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text=""
+        android:textSize="18sp"
+        />
+
+
+
+</RelativeLayout>
