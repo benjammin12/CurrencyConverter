@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button convertButton;
     private Spinner spinner;
     private Spinner convert_to_spinner;
+    private ProgressBar progressBar;
 
     //current 3 letter country codes
     private String [] countrys ={ "JPY", "CNY",  "RON", "MXN", "CAD",
@@ -43,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         convertButton = (Button) findViewById(R.id.convert_button);
 
         spinner = (Spinner) findViewById(R.id.base_currency);
         convert_to_spinner = (Spinner) findViewById(R.id.convert_currency_to);
+        progressBar = (ProgressBar) findViewById(R.id.loading_indicator);
 
         //TODO::Customize spinner creating new xml file and passing as second parameter.
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, countrys);
@@ -95,15 +97,18 @@ public class MainActivity extends AppCompatActivity {
             return searchResults;
         }
 
+        @Override
+        protected void onPreExecute() {
+            progressBar.setVisibility(View.VISIBLE);
+        }
+
         /**
          * After execute is completed, set the text field
          * @param s
          */
         @Override
         protected void onPostExecute(String s) {
-
-
-
+            progressBar.setVisibility(View.INVISIBLE);
             if (s != null && !s.equals("")) {
                 result = (TextView) findViewById(R.id.results);
                 result.setText("Currency value in " + currencyValueSelected + " is: " + s.toString());

@@ -84,17 +84,33 @@
         android:layout_marginTop="20dp"
         />
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convert_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        />
+
     <TextView
         android:id="@+id/results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/convert_currency_to"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="120dp"
         android:text=""
         android:textSize="18sp"
         />
 
-
+    </FrameLayout>
 
 </RelativeLayout>
